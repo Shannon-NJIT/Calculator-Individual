@@ -24,7 +24,14 @@ class TestCalculator(unittest.TestCase):
         for row in subtraction_list:
             self.assertEqual(self.calculator.subtraction(row['Value 2'], row['Value 1']), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
-            pprint(subtraction_list)
+            #pprint(subtraction_list)
+
+    def test_multiplication(self):
+        multiplication_list = csvreader('src/UnitTestMultiplication.csv').data
+        for row in multiplication_list:
+            self.assertEqual(self.calculator.multiplication(row['Value 1'], row['Value 2']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
+            pprint(multiplication_list)
 
 if __name__ == '__main__':
     unittest.main()
