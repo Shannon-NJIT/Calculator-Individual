@@ -38,7 +38,14 @@ class TestCalculator(unittest.TestCase):
         for row in square_list:
             self.assertEqual(self.calculator.square(row['Value 1']), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
-            pprint(square_list)
+            #pprint(square_list)
+
+    def test_division(self):
+        division_list = csvreader('src/UnitTestDivision.csv').data
+        for row in division_list:
+            self.assertAlmostEqual(self.calculator.division(row['Value 2'], row['Value 1']), float(row['Result']))
+            self.assertAlmostEqual(self.calculator.result, float(row['Result']))
+            pprint(division_list)
 
 
 if __name__ == '__main__':

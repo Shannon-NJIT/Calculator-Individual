@@ -17,6 +17,10 @@ def square(x):
     x = x * x
     return x
 
+def division(x, y):
+    z = y / x
+    return z
+
 class Calculator:
     result = 0
 
@@ -37,6 +41,10 @@ class Calculator:
 
     def square(self, x):
         self.result = square(int(x))
+        return self.result
+
+    def division(self, x, y):
+        self.result = division(float(y), float(x))
         return self.result
 
 
