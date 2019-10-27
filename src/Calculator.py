@@ -21,6 +21,10 @@ def division(x, y):
     z = y / x
     return z
 
+def sqrt(x):
+    math.sqrt(x)
+    return x
+
 class Calculator:
     result = 0
 
@@ -45,6 +49,10 @@ class Calculator:
 
     def division(self, x, y):
         self.result = division(float(y), float(x))
+        return self.result
+
+    def sqrt(self, x):
+        self.result = math.sqrt(float(x))
         return self.result
 
 
