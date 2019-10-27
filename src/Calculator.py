@@ -13,6 +13,10 @@ def multiplication(x, y):
     z = x * y
     return z
 
+def square(x):
+    x = x * x
+    return x
+
 class Calculator:
     result = 0
 
@@ -29,6 +33,10 @@ class Calculator:
 
     def multiplication(self, x, y):
         self.result = multiplication(int(x), int(y))
+        return self.result
+
+    def square(self, x):
+        self.result = square(int(x))
         return self.result
 
 

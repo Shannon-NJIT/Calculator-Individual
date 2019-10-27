@@ -31,7 +31,15 @@ class TestCalculator(unittest.TestCase):
         for row in multiplication_list:
             self.assertEqual(self.calculator.multiplication(row['Value 1'], row['Value 2']), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
-            pprint(multiplication_list)
+            #pprint(multiplication_list)
+
+    def test_square(self):
+        square_list = csvreader('src/UnitTestSquare.csv').data
+        for row in square_list:
+            self.assertEqual(self.calculator.square(row['Value 1']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
+            pprint(square_list)
+
 
 if __name__ == '__main__':
     unittest.main()
