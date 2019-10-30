@@ -17,7 +17,7 @@ class TestCalculator(unittest.TestCase):
             result = int(row['Result'])
             self.assertEqual(self.calculator.addition(row['Value 1'], row['Value 2']), result)
             self.assertEqual(self.calculator.result, result)
-        # pprint(addition_list)
+        # pprint(addition_list) 
 
     def test_subtraction(self):
         subtraction_list = CsvReader('src/UnitTestSubtraction.csv').data
